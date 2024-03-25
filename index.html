@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preetjot Kaur -Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+   <style>
+    /* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set font family and background color */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(19, 2, 31);
+  color: white;
+  max-width: ;
+}
+
+/* Navigation styles */
+
+nav img{
+  width:13rem;
+}
+nav li{
+  padding:20px;
+}
+
+nav a{
+  color: plum;
+  text-decoration: none;
+  font-size: large;
+}
+.collapse
+{
+  justify-content: end;
+}
+
+
+/* First section styles */
+
+.firstSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 23px 0px;
+  margin-bottom: 110px;
+}
+
+.leftSection {
+  font-size: 3rem;
+}
+
+.purple {
+  color: plum;
+}
+
+.rightSection img {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.leftSection {
+font-size: 3rem;
+padding-top: 5rem;
+
+animation: slideIn 1s ease-in-out forwards;
+}
+
+
+@keyframes slideIn {
+0% {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+100% {
+  opacity: 1;
+  transform: translateX(0);
+}
+}
+
+body {
+background-color: rgb(19, 2, 31);
+color: white;
+position: relative; /* Needed for positioning pseudo-elements */
+}
+
+/* Create stars */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.5;
+  z-index: -1;
+  overflow: hidden; /* Limit overflow */
+  animation: stars 50s linear infinite;
+}
+
+@keyframes stars {
+  0% {
+    transform: translate(0, -100%);
+  }
+  100% {
+    transform: translate(0, 100%);
+  }
+}
+
+
+/*--------------------------------------------------animation css----------------------------------------*/
+
+.skillSection{
+max-width: 85vw;
+margin: auto;
+border-radius: 30px;
+height: 15rem;
+margin-bottom: 10rem;
+display: block;
+align-items: center;
+justify-content: center;
+
+}
+.cardSection{
+display: flex;
+justify-content: center;
+
+}
+.card{
+margin-left: 25px;
+margin-right: 25px;
+background-color: rgb(19, 2, 31);
+
+padding-top: 15px;
+}
+.secondSection {
+display: block;
+justify-content: center; /* Center the section horizontally */
+align-items: center; /* Center the section vertically */
+border-radius: 20px;
+max-width: 90vw; /* Set maximum width to 60% of viewport width */
+margin: auto; /* Center the section horizontally */
+height: 55rem;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+margin-bottom: 10rem;
+}
+.skillSection .card {
+  border-color: black;
+}
+.skillSection .card p {
+  color: white;
+}
+
+.skills {
+text-align: center; /* Center align the text */
+margin-bottom: 20px; /* Add space between heading/paragraph and cards */
+padding-top:  30px;
+}
+
+
+.skills h1{
+  font-size: 4em;
+  color: plum;
+}
+.skills p{
+font-size:x-large;
+}
+
+.carousel-control-prev {
+left: -20px;
+}
+
+.carousel-control-next {
+right: -20px;
+}
+.skillImage{
+  width: 140px;
+  margin-top: -13px;
+  padding-bottom: 15px
+
+}
+.card-title{
+color: white;
+margin:8px 0;
+
+}
+
+
+.thirdSection {
+  display: block;
+  justify-content: space-around; /* Center the section horizontally */
+  align-items: center; /* Center the section vertically */
+  border-radius: 20px;
+  max-width: 70vw; /* Set maximum width to 60% of viewport width */
+  margin: auto; /* Center the section horizontally */
+  height: 85rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1.5); /* Add shadow effect */
+  margin-bottom: 10rem;
+}
+
+
+
+.projects {
+  text-align: center; /* Center align the text */
+  margin-bottom: 20px; /* Add space between heading/paragraph and cards */
+  padding-top: 30px;
+}
+.projects h1{
+  color: plum;
+ font-size: 4em;
+}
+.projects p {
+  font-size: larger;
+}
+
+.projects-card .card{
+  border-color: black;
+}
+.projectImg{
+   width:20rem;
+   height: 15rem;
+   border-radius: 10px;
+}
+.projects-card .card-title{
+  color: plum;
+}
+
+.projects-card p{
+  color: white;
+}
+
+
+.fourthSection{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  padding-bottom: 5rem;
+}
+.footer{
+background-color: black;
+
+}
+.black{
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.leftContact img{
+  width: 30rem;
+}
+
+
+.rightContact input {
+  background-color: rgb(19, 2, 31);
+  color: white; /* Set text color to white */
+}
+
+.rightContact input::placeholder {
+  color: white; /* Set placeholder text color to white */
+}
+.rightContact input:focus {
+  background-color: rgb(19, 2, 31); /* Override background color on focus */
+  color: white;
+}
+.rightContact textarea{
+  border-radius: 5px;
+  background-color: rgb(19, 2, 31);
+  color: white;
+  padding:5px;
+  border-color:white
+}
+
+.rightContact textarea::placeholder {
+  color: white; 
+}
+.rightContact button{
+  cursor: pointer;
+  width:7rem
+}
+
+.skillImg{
+  text-align: center;
+}
+
+.skillSection img{
+  width: 50px;
+}
+.social img{
+  margin:3px
+}
+footer h1{
+  color: plum;
+}
+.black h1{
+  font-size: 1.5em;
+}
+.projects-card .card-body{
+  text-align: justify;
+}
+
+   </style>
+
+</head>
+<body>
+
+ <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="Preetjot.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a href="#section1">Home</a>
+            </li>
+            <li class="nav-item">
+              <a  href="#section2">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a  href="#section3">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a  href="#section4">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+</header>
+
+  <main>
+
+    <!-- INTRODUCTION -->
+      <section  id="section1" class="firstSection">
+        <div class="row">
+        <div class="leftSection col-md-6 text-center">
+            Hello, I'm <span class="purple">Preetjot Kaur</span>.
+            <br> I'm a <span id="element"></span>
+        </div>
+        <div class="rightSection col-md-6 text-center">
+            <img src="image.png">
+        </div>
+      </div>
+      </section>
+
+      <!-- SKILLS SECTION  -->
+      
+      <section id="section2" class="secondSection">
+       <div class="skills">
+        <H1>FRAMEWORKS & TECH</H1>
+        <P>Driven by a passion for continuous learning and growth, I strive to adapt to new challenges and technologies. And these are some of the tools and frameworks with which I feel more comfortable without limiting myself to them.</P>
+       </div>
+
+        <div class="skillSection">
+
+            <div class="container">
+              
+                <div class="row">
+        
+                    <!-- Slide 1 -->
+                    <div class="cardSection">
+                        <div class="card" style="width: 18rem;">
+                          <div class="card-body">
+                            <img src="/images/react.png" alt="">
+                            <h5 class="card-title">React</h5>
+                            <p>Server and Client components. Hooks(useState , useEffect , useContext , useRef ) </p>
+                          </div>
+                        </div>
+            
+                        <div class="card" style="width: 18rem;">
+                          <div class="card-body">
+                            <img src="/images/nodejs.png" alt="">
+                            <h5 class="card-title">Node.js</h5>
+                            <p>Builds real time web applications , Routing , Layouts & API routes</p>
+                          </div>
+                        </div>
+            
+                        <div class="card" style="width: 18rem;">
+                          <div class="card-body">
+                            <img src="/images/database.png" alt="">
+                            <h5 class="card-title">Database</h5>
+                            <p> MongoDB stores data as JSON documents in a more flexible format.</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+        
+        
+                   <!-- slide 2 -->
+                  <div class="row">
+                    <div class="cardSection">
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <img src="/images/java-script.png" alt="">
+                          <h5 class="card-title">JavaScript</h5>
+                          <p>Dynamically updating content , use animations , pop-up menus , clickable buttons , control multimedia , etc. </p>
+                        </div>
+                      </div>
+            
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <img  class="expressIcon"src="/images/express.png" alt="">
+                          <h5 class="card-title">Express</h5>
+                          <p>Node js web application framework , single page , multipage , & hybrid web application.</p>
+                        </div>
+                      </div>
+            
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <img src="/images/authenticity.png" alt="">
+                          <h5 class="card-title">Authentication</h5>
+                          <p>Authentication using Express.js and middlewares like express validator. </p>
+                        </div>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+        </div>  
+      </section>
+
+      
+
+      <!-- PROJECT SECTION  -->
+       <section id="section3" class="thirdSection">
+
+        <div class="projects">
+          <H1>PROJECTS</H1>
+          <P>Explore below to discover a showcase of my latest projects and ventures, each representing a unique blend of creativity, skill, and passion</P>
+        </div>
+
+        <div class="container projects-card">
+
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-6 text-center">
+                <a href="https://algorithm-visualiser-mo2f.onrender.com/" target="_blank"><img  class="projectImg" src="/images/stockPrediction.png" class="img-fluid rounded-start" alt="..."></a>
+              </div>
+              <div class="col-md-6 text-center">
+                <div class="card-body">
+                  <h5 class="card-title">Algorithm visualiser</h5>
+                  <p class="card-text"> It is an interactive online platform that
+                    visualizes algorithms from code. Learning an algorithm
+                    gets much easier with visualizing it. So it allow users
+                    to understand the concept of different sorting
+                    algorithms using visualisation.</p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-6 text-center">
+                <div class="card-body">
+                  <h5 class="card-title">TextUtils</h5>
+                  <p class="card-text">TextUtils is a ReactJs website built primarily to do various operations on regular typed text. You can safely use WordPad or NotePad for text drafting, and saving, but TextUtils offers much more than simple text drafting and formatting. TextUtils can convert your text to any case in just one simple click of a button.It is a Simple Text Analyzer , which mutilates your text, but in a tender way.</p> 
+                </div>
+              </div>
+              <div class="col-md-6 text-center">
+               <a href="https://textutils-git-main-preetjotkaur01.vercel.app/" target="_blank"> <img  class="projectImg" src="/images/textUtils.png" class="img-fluid rounded-start" alt="..."></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-6 text-center">
+                <a href="https://weather-forecasting-website-b69wk6pst-preetjotkaur01.vercel.app/" target="_blank"><img  class="projectImg" src="/images/weatherForcasting.png" class="img-fluid rounded-start" alt="..."></a>
+              </div>
+              <div class="col-md-6 text-center">
+                <div class="card-body">
+                  <h5 class="card-title">Weather Forcasting App</h5>
+                  <p class="card-text"> It is a website that predicts and tell the user about the conditions of the
+                    atmosphere for a given location and time. Following technologies and frameworks are used for this project i.e. HTML, css, JavaScript, Github & Node.js </p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-6 text-center">
+                <div class="card-body">
+                  <h5 class="card-title">Stock Price Prediction App</h5>
+                  <p class="card-text">It is a web app that forecasts the future price movements of a particular
+                    stock or a group of stocks. It analyzes historical stock price data, to make
+                    predictions or estimates about future stock prices.</p>
+                
+                </div>
+              </div>
+              <div class="col-md-6 text-center">
+                <a href="" target="_blank"><img  class="projectImg" src="/images/stockPrediction.png" class="img-fluid rounded-start" alt="..."></a>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+       </section>
+
+       <!-- GET IN TOUCH -->
+
+       <footer>
+        <div class="black">
+          <h1 class="getInTouch">GET IN TOUCH</h1>
+        </div>
+       <section id="section4" class="fourthSection">
+
+        <div class="leftContact">
+          <img src="/images/contact-img.svg" alt="">
+        </div>
+
+        <div class="rightContact">
+          <form>
+           <div class="row">
+            <div class=" col-6 mb-3">
+              <input type="text" class="form-control" id="name" placeholder="First Name">
+            </div>
+            <div class="col-6 mb-3">
+              <input type="text" placeholder="Last Name" class="form-control" id="name">
+            </div>
+          </div>   
+            <div class="mb-3">
+              <input type="email" placeholder="Email Address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address">
+            </div>
+            <div class="mb-3">
+              <textarea rows="6" cols="60" placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-light">Submit</button>
+          </form>
+
+          <div class="social">
+            <h1>Social Media</h1>
+            <a href="https://www.linkedin.com/in/preetjot-kaur-44424b21a/"><img src="/images/linkedin.png" alt=""></a>
+            <a href="https://www.figma.com/@preetjotKaur"><img src="/images/Figma.png" alt=""></a>
+            <a href="https://github.com/preetjotkaur01"><img src="/images/github.png" alt=""></a>
+          </div>
+        </div>
+
+       
+
+       </section>
+      
+      </footer>
+
+
+  </main>
+  
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Software Developer.'],
+      typeSpeed: 50,
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
