@@ -21,10 +21,19 @@
 
 /* Set font family and background color */
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: rgb(19, 2, 31);
-  color: white;
-  max-width: ;
+  
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(19, 2, 31);
+    color: white;
+    position: relative; /* Needed for positioning pseudo-elements */
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Ensure body covers full width */
+  
+  
+
 }
 
 /* Navigation styles */
@@ -101,6 +110,8 @@ body {
 background-color: rgb(19, 2, 31);
 color: white;
 position: relative; /* Needed for positioning pseudo-elements */
+justify-content: center;
+align-items: center;
 }
 
 /* Create stars */
@@ -131,10 +142,11 @@ body::before {
 /*--------------------------------------------------animation css----------------------------------------*/
 
 .skillSection{
-max-width: 85vw;
+  display: flex;
+  flex-direction: column;
+
 margin: auto;
 border-radius: 30px;
-height: 15rem;
 margin-bottom: 10rem;
 display: block;
 align-items: center;
@@ -144,26 +156,33 @@ justify-content: center;
 .cardSection{
 display: flex;
 justify-content: center;
+flex-wrap: wrap;
 
 }
 .card{
-margin-left: 25px;
-margin-right: 25px;
-background-color: rgb(19, 2, 31);
+  margin: 0 20px;
+  margin-bottom: 20px;
+  background-color: rgb(19, 2, 31);
+  padding-top: 15px;
 
 padding-top: 15px;
 }
 .secondSection {
-display: block;
+display: flex;
+flex-direction: column;
+padding: 0 2rem;
 justify-content: center; /* Center the section horizontally */
 align-items: center; /* Center the section vertically */
 border-radius: 20px;
-max-width: 90vw; /* Set maximum width to 60% of viewport width */
+width: fit-content;
 margin: auto; /* Center the section horizontally */
-height: 55rem;
+height: fit-content;
 box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add shadow effect */
 margin-bottom: 10rem;
+padding-bottom: 1rem;
 }
+
+
 .skillSection .card {
   border-color: black;
 }
@@ -184,6 +203,9 @@ padding-top:  30px;
 }
 .skills p{
 font-size:x-large;
+width: 95%;
+text-align: center;
+justify-content: center;
 }
 
 .carousel-control-prev {
@@ -204,27 +226,39 @@ color: white;
 margin:8px 0;
 
 }
-
-
 .thirdSection {
-  display: block;
-  justify-content: space-around; /* Center the section horizontally */
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  justify-content: center; /* Center the section horizontally */
   align-items: center; /* Center the section vertically */
   border-radius: 20px;
-  max-width: 70vw; /* Set maximum width to 60% of viewport width */
-  margin: auto; /* Center the section horizontally */
-  height: 85rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 1.5); /* Add shadow effect */
+  width: 100%;
+  margin: 0px; /* Center the section horizontally */
+  height: fit-content;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add shadow effect */
   margin-bottom: 10rem;
+  padding-bottom: 1rem;
 }
 
 
-
 .projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center; /* Center align the text */
   margin-bottom: 20px; /* Add space between heading/paragraph and cards */
   padding-top: 30px;
 }
+.projects-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center align the text */
+}
+
 .projects h1{
   color: plum;
  font-size: 4em;
@@ -252,13 +286,19 @@ margin:8px 0;
 
 .fourthSection{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   border-radius: 20px;
   padding-bottom: 5rem;
 }
-.footer{
-background-color: black;
+footer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin:auto;
+  
 
 }
 .black{
@@ -318,6 +358,68 @@ footer h1{
 .projects-card .card-body{
   text-align: justify;
 }
+.leftContact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+.rightContact{
+  padding: 0 2rem;
+}
+.skillSection .row{
+      justify-content: center;
+      align-items: center;
+}
+
+/*Responsive classes*/
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) {
+ .projects-card .card-title{
+  text-align: center;
+ }
+ nav li{
+  padding:0px;
+}
+
+ 
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .projects-card .card-title{
+    text-align: center;
+   }
+   nav li{
+    padding:0px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .projects-card .card-title{
+    text-align: right;
+   }
+   nav li{
+    padding:20px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  
+  .projects-card .card-title{
+    text-align: right;
+   }
+   nav li{
+    padding:20px;
+  }
+}
+
+
 
    </style>
 
@@ -328,7 +430,7 @@ footer h1{
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="Preetjot.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
@@ -376,71 +478,61 @@ footer h1{
         <P>Driven by a passion for continuous learning and growth, I strive to adapt to new challenges and technologies. And these are some of the tools and frameworks with which I feel more comfortable without limiting myself to them.</P>
        </div>
 
-        <div class="skillSection">
+      
+            <div class="container skillSection"> 
+              <div class="row">
 
-            <div class="container">
-              
-                <div class="row">
-        
-                    <!-- Slide 1 -->
-                    <div class="cardSection">
-                        <div class="card" style="width: 18rem;">
-                          <div class="card-body">
-                            <img src="/images/react.png" alt="">
-                            <h5 class="card-title">React</h5>
-                            <p>Server and Client components. Hooks(useState , useEffect , useContext , useRef ) </p>
-                          </div>
-                        </div>
-            
-                        <div class="card" style="width: 18rem;">
-                          <div class="card-body">
-                            <img src="/images/nodejs.png" alt="">
-                            <h5 class="card-title">Node.js</h5>
-                            <p>Builds real time web applications , Routing , Layouts & API routes</p>
-                          </div>
-                        </div>
-            
-                        <div class="card" style="width: 18rem;">
-                          <div class="card-body">
-                            <img src="/images/database.png" alt="">
-                            <h5 class="card-title">Database</h5>
-                            <p> MongoDB stores data as JSON documents in a more flexible format.</p>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-        
-        
-                   <!-- slide 2 -->
-                  <div class="row">
-                    <div class="cardSection">
-                      <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                          <img src="/images/java-script.png" alt="">
-                          <h5 class="card-title">JavaScript</h5>
-                          <p>Dynamically updating content , use animations , pop-up menus , clickable buttons , control multimedia , etc. </p>
-                        </div>
-                      </div>
-            
-                      <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                          <img  class="expressIcon"src="/images/express.png" alt="">
-                          <h5 class="card-title">Express</h5>
-                          <p>Node js web application framework , single page , multipage , & hybrid web application.</p>
-                        </div>
-                      </div>
-            
-                      <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                          <img src="/images/authenticity.png" alt="">
-                          <h5 class="card-title">Authentication</h5>
-                          <p>Authentication using Express.js and middlewares like express validator. </p>
-                        </div>
-                      </div>
-                      </div>
+                <div class="card col-sm-12 col-lg-4" style="width: 18rem;">
+                  <div class="card-body">
+                    <img src="/images/react.png" alt="">
+                    <h5 class="card-title">React</h5>
+                    <p>Server and Client components. Hooks(useState , useEffect , useContext , useRef ) </p>
                   </div>
                 </div>
-        </div>  
+    
+                <div class="card col-sm-12 col-lg-4" style="width: 18rem;">
+                  <div class="card-body">
+                    <img src="/images/nodejs.png" alt="">
+                    <h5 class="card-title">Node.js</h5>
+                    <p>Builds real time web applications , Routing , Layouts & API routes</p>
+                  </div>
+                </div>
+    
+                <div class="card col-sm-12 col-lg-4" style="width: 18rem;">
+                  <div class="card-body">
+                    <img src="/images/database.png" alt="">
+                    <h5 class="card-title">Database</h5>
+                    <p> MongoDB stores data as JSON documents in a more flexible format.</p>
+                  </div>
+                </div>
+             
+                
+              <div class="card col-sm-12 col-lg-4" style="width: 18rem;">
+                <div class="card-body">
+                  <img src="/images/java-script.png" alt="">
+                  <h5 class="card-title">JavaScript</h5>
+                  <p>Dynamically updating content , use animations , pop-up menus , clickable buttons , control multimedia , etc. </p>
+                </div>
+              </div>
+    
+              <div class="card col-sm-12 col-lg-4" style="width: 18rem;">
+                <div class="card-body">
+                  <img  class="expressIcon"src="/images/express.png" alt="">
+                  <h5 class="card-title">Express</h5>
+                  <p>Node js web application framework , single page , multipage , & hybrid web application.</p>
+                </div>
+              </div>
+    
+              <div class="card col-sm-12 col-lg-4" style="width: 18rem;">
+                <div class="card-body">
+                  <img src="/images/authenticity.png" alt="">
+                  <h5 class="card-title">Authentication</h5>
+                  <p>Authentication using Express.js and middlewares like express validator. </p>
+                </div>
+              </div>
+
+            </div>
+          </div>            
       </section>
 
       
@@ -457,12 +549,13 @@ footer h1{
 
           <div class="card mb-3">
             <div class="row g-0">
-              <div class="col-md-6 text-center">
-                <a href="https://algorithm-visualiser-mo2f.onrender.com/" target="_blank"><img  class="projectImg" src="/images/stockPrediction.png" class="img-fluid rounded-start" alt="..."></a>
+              <h5 class="card-title">Algorithm visualiser</h5>
+              <div class="col-md-12 col-lg-6 project-img text-center">
+                <a href="https://algorithm-visualiser-mo2f.onrender.com/" target="_blank"><img  class="projectImg" src="/images/visualiser.png" class="img-fluid rounded-start" alt="..."></a>
               </div>
-              <div class="col-md-6 text-center">
+              <div class="col-md-12 col-lg-6 project-txt text-center">
                 <div class="card-body">
-                  <h5 class="card-title">Algorithm visualiser</h5>
+                  
                   <p class="card-text"> It is an interactive online platform that
                     visualizes algorithms from code. Learning an algorithm
                     gets much easier with visualizing it. So it allow users
@@ -476,29 +569,29 @@ footer h1{
 
           <div class="card mb-3">
             <div class="row g-0">
-              <div class="col-md-6 text-center">
+              <h5 class="card-title">TextUtils</h5>
+              <div class="col-md-12 col-lg-6 project-img text-center">
+                <a href="https://textutils-git-main-preetjotkaur01.vercel.app/" target="_blank"> <img  class="projectImg" src="/images/textUtils.png" class="img-fluid rounded-start" alt="..."></a>
+               </div>
+              <div class="col-md-12 col-lg-6 project-txt text-center">
                 <div class="card-body">
-                  <h5 class="card-title">TextUtils</h5>
-                  <p class="card-text">TextUtils is a ReactJs website built primarily to do various operations on regular typed text. You can safely use WordPad or NotePad for text drafting, and saving, but TextUtils offers much more than simple text drafting and formatting. TextUtils can convert your text to any case in just one simple click of a button.It is a Simple Text Analyzer , which mutilates your text, but in a tender way.</p> 
+                  <p class="card-text">TextUtils is a ReactJs website built primarily to do various operations on regular typed text. You can safely use WordPad for text drafting, but TextUtils offers much more than simple text drafting and formatting. TextUtils can convert your text to any case in just one simple click of a button.</p> 
                 </div>
               </div>
-              <div class="col-md-6 text-center">
-               <a href="https://textutils-git-main-preetjotkaur01.vercel.app/" target="_blank"> <img  class="projectImg" src="/images/textUtils.png" class="img-fluid rounded-start" alt="..."></a>
-              </div>
+             
             </div>
           </div>
 
           <div class="card mb-3">
             <div class="row g-0">
-              <div class="col-md-6 text-center">
+              <h5 class="card-title">Weather Forcasting App</h5>
+              <div class="col-md-12 col-lg-6 project-img text-center">
                 <a href="https://weather-forecasting-website-b69wk6pst-preetjotkaur01.vercel.app/" target="_blank"><img  class="projectImg" src="/images/weatherForcasting.png" class="img-fluid rounded-start" alt="..."></a>
               </div>
-              <div class="col-md-6 text-center">
+              <div class="col-md-12 col-lg-6 project-txt text-center">
                 <div class="card-body">
-                  <h5 class="card-title">Weather Forcasting App</h5>
                   <p class="card-text"> It is a website that predicts and tell the user about the conditions of the
-                    atmosphere for a given location and time. Following technologies and frameworks are used for this project i.e. HTML, css, JavaScript, Github & Node.js </p>
-                  
+                    atmosphere for a given location and time. Following technologies and frameworks are used for this project i.e. HTML, css, JavaScript, Github & Node.js </p> 
                 </div>
               </div>
             </div>
@@ -506,17 +599,16 @@ footer h1{
 
           <div class="card mb-3">
             <div class="row g-0">
-              <div class="col-md-6 text-center">
+              <h5 class="card-title">Stock Price Prediction App</h5>
+              <div class="col-md-12 col-lg-6 project-img text-center">
+                <a href="" target="_blank"><img  class="projectImg" src="/images/stockPrediction.png" class="img-fluid rounded-start" alt="..."></a>
+              </div>
+              <div class="col-md-12 col-lg-6 project-txt text-center">
                 <div class="card-body">
-                  <h5 class="card-title">Stock Price Prediction App</h5>
                   <p class="card-text">It is a web app that forecasts the future price movements of a particular
                     stock or a group of stocks. It analyzes historical stock price data, to make
                     predictions or estimates about future stock prices.</p>
-                
                 </div>
-              </div>
-              <div class="col-md-6 text-center">
-                <a href="" target="_blank"><img  class="projectImg" src="/images/stockPrediction.png" class="img-fluid rounded-start" alt="..."></a>
               </div>
             </div>
           </div>
@@ -533,12 +625,13 @@ footer h1{
           <h1 class="getInTouch">GET IN TOUCH</h1>
         </div>
        <section id="section4" class="fourthSection">
+        <div class="row">
 
-        <div class="leftContact">
+        <div class="leftContact col-sm-12 col-lg-6">
           <img src="/images/contact-img.svg" alt="">
         </div>
 
-        <div class="rightContact">
+        <div class="rightContact col-sm-12 col-lg-6">
           <form>
            <div class="row">
             <div class=" col-6 mb-3">
@@ -552,7 +645,7 @@ footer h1{
               <input type="email" placeholder="Email Address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address">
             </div>
             <div class="mb-3">
-              <textarea rows="6" cols="60" placeholder="Message"></textarea>
+              <textarea rows="6" cols="55" placeholder="Message"></textarea>
             </div>
             <button type="submit" class="btn btn-light">Submit</button>
           </form>
@@ -566,7 +659,7 @@ footer h1{
         </div>
 
        
-
+      </div>
        </section>
       
       </footer>
